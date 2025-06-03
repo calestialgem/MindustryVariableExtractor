@@ -179,6 +179,8 @@ public class GlobalVars{
                 Log.err("Error reading logic ID mapping", e);
             }
         }
+
+        VarWriter.write(vars.values(), "global_variables.txt");
     }
 
     /** Updates global time and other state variables. */

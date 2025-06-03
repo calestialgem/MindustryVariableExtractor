@@ -37,6 +37,9 @@ public class LAssembler{
         asm.privileged = privileged;
 
         asm.instructions = st.map(l -> l.build(asm)).retainAll(l -> l != null).toArray(LInstruction.class);
+
+        VarWriter.write(asm.vars.values(), "assembled_values.txt");
+
         return asm;
     }
 
@@ -150,6 +153,7 @@ public class LAssembler{
 
     @Nullable
     public LVar getVar(String name){
+        VarWriter.write(vars.values(), "got_variables.txt");
         return vars.get(name);
     }
 

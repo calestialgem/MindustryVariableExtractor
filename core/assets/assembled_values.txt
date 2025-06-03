@@ -1,0 +1,6 @@
+@counter
+@unit
+@this
+result
+___1.0
+___0.0
